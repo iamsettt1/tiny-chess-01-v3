@@ -12,11 +12,21 @@ are converted by the shortest forced line. Search runs on a fixed node
 budget — fully deterministic, no wall clock in move choice — and
 repetition and the 50-move rule score as draws inside the search.
 
+In short, it is a Python negamax chess engine with alpha-beta pruning, a
+transposition table, quiescence search, tapered piece-square-table
+evaluation, and a small built-in opening book. In the official local
+trial-0 it scored Elo 2112, won all 8 games, with 1,146 spare plies.
+
 ## Run
 
 python3 main.py — the engine connects to the environment at
 MAKEFUN_ENV_URL, asks for its next game, replays the move list, searches
 and posts each move back until the game ends.
+
+## Status
+
+Submitted to the make.fun tiny-chess-01 bounty by @jensen. The packed
+entrypoint main.py is 4,089 bytes (cap 4,096). Referral code: 9j3w1sg2.
 
 ## Built with
 
